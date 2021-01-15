@@ -1,0 +1,23 @@
+My theme resides in the .themes folder, so first I made a gtk.gresource.xml, this includes all the individual files of what is in your GTK-3.0 folder. 
+
+open terminal in GTK-3.0 of the theme: this is my terminal command:
+
+glib-compile-resources gtk.gresource.xml
+
+this here is the long version, but the sort version above works too:
+
+glib-compile-resources --sourcedir=/home/paul/.themes/Prof-Gnome-light-4.0/gtk-3.0 --target=/home/paul/.themes/Prof-Gnome-light-4.0/gtk-3.0/gtk.gresource /home/paul/.themes/Prof-Gnome-light-4.0/gtk-3.0/gtk.gresource.xml
+
+If it finishes correctly (you must be certain of the correct files !), you will get a  
+gtk.resource in your GTK-3.0-folder:
+
+then change gtk.css with only this line:
+@import url("resource:///org/gnome/theme/gtk.css");
+
+and change gtk-dark.css with only this line:
+@import url("resource:///org/gnome/theme/gtk-dark.css");
+
+GTK-3.0 file should only include:
+gtk.css
+gtk-dark.css
+gtk.gresource
