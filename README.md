@@ -15,20 +15,32 @@ So for example after choosing 'barebone-light', 'Standard-blue' and 'Wrk-PRO'-co
 you file should have the following components:
 
 -gnome-shell
+
 -gtk-3.0
+
 -copying
+
 
 Withing the gtk-3.0 it should look like this:
 
 -a folder 'global-graphics'
+
 -a folder 'theme-colors' 
+
 -a folder 'theme-graphics'
+
 -G-gtk.css
+
 -G-gtk-dark.css
+
 -gtk.css
+
 -gtk.gresource.xml
+
 -main-dark.css
+
 -main-light.css
+
 
 Your file now has all the components needed to have a working theme.  This can be copied to your  '.themes'-folder on your computer.
 
@@ -48,9 +60,12 @@ Rename 'G-gtk-dark.css' to gtk-dark.css
 And that is it ! 
 
 Your final theme-file should now only contain:
+
 -gtk.css
+
 -gtk-dark.css
-gtk.resource
+
+-gtk.resource
 
 
 
