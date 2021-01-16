@@ -2,9 +2,9 @@
 
 This repository contains the gtk- and graphical elements needed to assemble a GTK3-theme and gnome-shell with the purpose to create a-la-carte themes and providing the means to create a binary output
 
-##How to make a theme?
+## How to make a theme?
 
-##Notice: this repository contain elements which may not be finished! This is a 'working-environment' ! 
+## Notice: this repository contain elements which may not be finished! This is a 'working-environment' ! 
 
 -create a file with the name of your theme,
 -in this file you put the content of one of the 'barebone-files'
@@ -34,7 +34,7 @@ Your file now has all the components needed to have a working theme.  This can b
 
 If you want a optimized theme you can use the gtk.gresource.
 
-##How to make a gresourced theme :
+## How to make a gresourced theme :
 
 Go into the gtk3.0 file of your theme, open a terminal and execute the following command:
  glib-compile-resources gtk.gresource.xml
