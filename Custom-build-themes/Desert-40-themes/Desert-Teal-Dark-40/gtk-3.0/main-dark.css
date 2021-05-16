@@ -2006,9 +2006,9 @@ modelbutton.flat
            padding: 0px 4px 0 6px;
      border-radius: 3.33px;
 }
-modelbutton.flat:hover{ 
-
-            color: @text_color;
+modelbutton.flat
+{ 
+             color: @text_color;
        text-shadow: -0.1px    0px alpha(@text_color, 0.20),
 		             0.1px    0px alpha(@text_color, 0.20),
 		               0px  0.1px alpha(@text_color, 0.20),
@@ -2017,24 +2017,40 @@ modelbutton.flat:hover{
 		               0px    1px alpha(@text_shadow_color, 0.4),
 	                   1px    0px alpha(@text_shadow_color, 0.12),
 	                  -1px    0px alpha(@text_shadow_color, 0.12);
-  background-image:linear-gradient(to right,rgba(255,255,255,0.1),rgba(255,255,255,0.13),rgba(255,255,255,0.13),rgba(1255,255,255,0.1));
- /*background-image: linear-gradient(to bottom right,@modelbutton_bg,
-                                             shade(@modelbutton_bg,0.92));*/
+            margin: 0 -2px;
+        min-height: 24px;
+           padding: 0px 4px 0 6px;
+     border-radius: 3.33px;
+}
+modelbutton.flat:hover{ 
+
+            color: @modelbutton_selected_text_color; 
+      text-shadow:    
+				   -0.1px    0px alpha(@modelbutton_selected_text_color, 0.2),
+				    0.1px    0px alpha(@modelbutton_selected_text_color, 0.2),
+				      0px  0.1px alpha(@modelbutton_selected_text_color, 0.4),
+				      0px -0.1px alpha(@modelbutton_selected_text_color, 0.4),
+				      0px   -1px alpha(@modelbutton_selected_text_color_shadow_color, 0.12),
+				      0px    1px alpha(@modelbutton_selected_text_color_shadow_color, 0.4),
+				      1px    0px alpha(@modelbutton_selected_text_color_shadow_color, 0.12),
+				     -1px    0px alpha(@modelbutton_selected_text_color_shadow_color, 0.12);
+ background-image: linear-gradient(to bottom right,@modelbutton_bg,
+                                             shade(@modelbutton_bg,0.92));
 }	
 modelbutton.flat:active
 { 
-color: @text_color;
-       text-shadow: -0.1px    0px alpha(@text_color, 0.20),
-		             0.1px    0px alpha(@text_color, 0.20),
-		               0px  0.1px alpha(@text_color, 0.20),
-		               0px -0.1px alpha(@text_color, 0.20),
-	                   0px   -1px alpha(@text_shadow_color, 0.12),
-		               0px    1px alpha(@text_shadow_color, 0.4),
-	                   1px    0px alpha(@text_shadow_color, 0.12),
-	                  -1px    0px alpha(@text_shadow_color, 0.12);
-  background-image:linear-gradient(to right,rgba(255,255,255,0.1),rgba(255,255,255,0.13),rgba(255,255,255,0.13),rgba(1255,255,255,0.1));
- /*background-image: linear-gradient(shade(@modelbutton_bg,0.92),
-                                          @modelbutton_bg);*/
+            color: @modelbutton_selected_text_color; 
+      text-shadow:    
+				   -0.1px    0px alpha(@modelbutton_selected_text_color, 0.2),
+				    0.1px    0px alpha(@modelbutton_selected_text_color, 0.2),
+				      0px  0.1px alpha(@modelbutton_selected_text_color, 0.4),
+				      0px -0.1px alpha(@modelbutton_selected_text_color, 0.4),
+				      0px   -1px alpha(@modelbutton_selected_text_color_shadow_color, 0.12),
+				      0px    1px alpha(@modelbutton_selected_text_color_shadow_color, 0.4),
+				      1px    0px alpha(@modelbutton_selected_text_color_shadow_color, 0.12),
+				     -1px    0px alpha(@modelbutton_selected_text_color_shadow_color, 0.12);
+ background-image: linear-gradient(shade(@modelbutton_bg,0.92),
+                                          @modelbutton_bg);
        box-shadow: inset 0 1px 2px alpha(@shadows_dark,0.16);
 }   
 modelbutton.flat arrow
@@ -6832,43 +6848,71 @@ colorchooser .popover.osd
   background-color: rgba(46, 52, 54, 0.1);
      border-radius: 4px;
 }
-/*(((((((((( Window Decorations )))))))))) 
-*/
+/*(((((((((( Window Decorations )))))))))) */
 decoration:backdrop,
-decoration
-{ 
-  border-radius: 6px; 
-   border-width: 0px; 
-     box-shadow: 0px 2px 6px 6px rgba(0,0,0,0.4),
-                 0 0 1px 1px rgba(0,0,0,0.1);
-         margin: 4px;
-}
+decoration { 
+
+  border-radius: 9px; 
+  border-width: 0px; 
+ box-shadow: 0px 16px 28px 8px rgba(0,0,0,0.4),0 0 1px 1px rgba(0,0,0,0.08);
+  margin: 4px; }
+
+/*decoration:backdrop { 
+
+  border-radius: 9px; 
+  border-width: 0px; 
+  box-shadow: 0px 2px 6px 6px rgba(0,0,0,0.35),0 0 1px 1px rgba(0,0,0,0.1);
+  margin: 4px; }*/
+/*csd decoration:backdrop,
+csd decoration {
+
+  border-radius: 6px;
+  border-width: 0px;
+  box-shadow: 0px 6px 6px 10px rgba(0,0,0,0.35);
+  margin: 0px;}*/
+
 .maximized decoration, 
 .fullscreen decoration, 
 .tiled decoration, 
 .tiled-top decoration, 
 .tiled-right decoration, 
 .tiled-bottom decoration, 
-.tiled-left decoration
-{ 
-  border-radius: 0;
-}
-.popup decoration
-{
-  border-radius: 6px;
-}
-.ssd decoration
-{ 
-  border-radius: 6px;
-     box-shadow: 0px 2px 6px 6px rgba(0,0,0,0.15),
-                 0 0 1px 1px rgba(0,0,0,0.5);
-         margin:4px;
-}
-.csd.popup decoration 
-{ 
+.tiled-left decoration { 
+
+  border-radius: 0; }
+
+.popup decoration {
+
+  border-radius: 6px;}
+
+.ssd decoration { 
+
+  border-radius: 9px;
+  box-shadow: 0px 2px 6px 6px rgba(0,0,0,0.15),0 0 1px 1px rgba(0,0,0,0.08);
+  margin:4px;}
+
+.csd.popup decoration { 
+
   border-radius: 6px; 
-     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);}
+
+tooltip.csd decoration { 
+
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18);
+  border-radius: 6px;}
+
+messagedialog.csd decoration {
+ 
+  border-radius: 6px;
+  box-shadow: 0 12px 12px 1px rgba(0, 0, 0, 0.5);}
+
+.solid-csd decoration {
+
+  border: 1px solid @headerbar_color;
+  background-color: transparent;
+  margin: 0;
+  padding: 2px;
+  /*box-shadow: 0 6px 6px rgba(0, 0, 0, 0.26);*/}
 tooltip.csd decoration
 { 
      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18);
@@ -7766,12 +7810,12 @@ background-image:linear-gradient(shade(@headerbar_button_color,0.90),shade(@head
 {
   background-image: none;
   background-color: @theme_base_color;
-  /*  padding-bottom: 6px;*/
+    padding-bottom: 6px;
      border-radius: 0 0 6px 0;
 } 
 .nautilus-window notebook treeview
 {
-  /*padding-bottom: 6px;*/
+  padding-bottom: 6px;
    border-radius: 0 0 6px 0;
 }
 .nautilus-window notebook > stack
@@ -7916,12 +7960,12 @@ window.background.csd > leaflet > stack.background > widget > box.vertical > box
 {
   background-image: none;
   background-color: @theme_base_color;
-   /* padding-bottom: 6px;*/
+    padding-bottom: 6px;
      border-radius: 0 0 6px 0;
 } 
 .nautilus-window notebook treeview
 {
-  /*  padding-bottom: 6px;*/
+    padding-bottom: 6px;
      border-radius: 0 0 6px 0;
 }
 .tweak-categories
